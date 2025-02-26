@@ -1,0 +1,93 @@
+[
+    {
+        "idVersao": 1,
+        "classes": [
+            {
+                "id": 1,
+                "descricao": "Entrada"
+            },
+            {
+                "id": 2,
+                "descricao": "Adjunto/DIII - Nível 1"
+            },
+            {
+                "id": 3,
+                "descricao": "Adjunto/DIII - Nível 2"
+            },
+            {
+                "id": 4,
+                "descricao": "Adjunto/DIII - Nível 3"
+            },
+            {
+                "id": 5,
+                "descricao": "Adjunto/DIII - Nível 4"
+            },
+            {
+                "id": 6,
+                "descricao": "Associado/DIV - Nível 1"
+            },
+            {
+                "id": 7,
+                "descricao": "Associado/DIV - Nível 2"
+            },
+            {
+                "id": 8,
+                "descricao": "Associado/DIV - Nível 3"
+            },
+            {
+                "id": 9,
+                "descricao": "Associado/DIV - Nível 4"
+            },
+            {
+                "id": 10,
+                "descricao": "Titular"
+            }
+        ]
+    },
+
+    {
+        "idVersao": 2,
+        "classes": [
+            {
+                "id": 11,
+                "descricao": "Entrada"
+            },
+            {
+                "id": 12,
+                "descricao": "Adjunto/DIII - Nível 1"
+            },
+            {
+                "id": 13,
+                "descricao": "Adjunto/DIII - Nível 2"
+            },
+            {
+                "id": 14,
+                "descricao": "Adjunto/DIII - Nível 3"
+            },
+            {
+                "id": 15,
+                "descricao": "Adjunto/DIII - Nível 4"
+            },
+            {
+                "id": 16,
+                "descricao": "Associado/DIV - Nível 1"
+            },
+            {
+                "id": 17,
+                "descricao": "Associado/DIV - Nível 2"
+            },
+            {
+                "id": 18,
+                "descricao": "Associado/DIV - Nível 3"
+            },
+            {
+                "id": 19,
+                "descricao": "Associado/DIV - Nível 4"
+            },
+            {
+                "id": 20,
+                "descricao": "Titular"
+            }
+        ]
+    }
+]

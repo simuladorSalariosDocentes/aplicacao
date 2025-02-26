@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "descricao": "DE (Dedicação Exclusiva)"
+    },
+    {
+        "id": 2,
+        "descricao": "40h"
+    },
+    {
+        "id": 3,
+        "descricao": "20h"
+    }
+]

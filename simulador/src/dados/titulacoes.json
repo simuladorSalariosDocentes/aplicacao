@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "descricao": "Graduação"
+    },
+    {
+        "id": 2,
+        "descricao": "Aperfeiçoamento"
+    },
+    {
+        "id": 3,
+        "descricao": "Especialização (RSCI)"
+    },
+    {
+        "id": 4,
+        "descricao": "Mestrado (RSCII)"
+    },
+    {
+        "id": 5,
+        "descricao": "Doutorado (RSCIII)"
+    }
+]
