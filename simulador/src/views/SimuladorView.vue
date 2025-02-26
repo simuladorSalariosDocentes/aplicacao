@@ -1,6 +1,32 @@
 <script setup>
+import { onMounted, ref } from 'vue';
 import Simulador from '../components/Simulador.vue'
-import Resultado from '@/components/Resultado.vue';
+import Vencimento from '@/components/Vencimento.vue';
+
+const compVencimento = ref(null); // Referência ao componente Vencimento
+
+/* Atributos do objeto simulador.vencimento
+{
+  carreira: null,
+  auxilios: null,
+  gratificacoes: null,
+  previdencia: null
+}
+*/
+const simulador = {
+  vencimento: null
+};
+
+function setVencimento(vencimento) {
+  simulador.vencimento = vencimento;
+  
+  compVencimento.value.calcularVencimento(simulador.vencimento);
+}
+
+onMounted(() => {
+  compVencimento.value.calcularVencimento(simulador.vencimento);
+});
+
 </script>
 
 <template>
@@ -8,11 +34,11 @@ import Resultado from '@/components/Resultado.vue';
     <div class="row">
 
       <div class="col-7">
-        <Simulador />
+        <Simulador @sumarizarSimulador="setVencimento" />
       </div>
 
       <div class="col-5">
-        <Resultado />
+        <Vencimento ref="compVencimento"  />
       </div>
 
     </div>

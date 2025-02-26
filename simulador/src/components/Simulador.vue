@@ -1,6 +1,22 @@
 <script setup>
 import Carreira from '@/components/simulador/Carreira.vue';
 
+//Emitter 'sumarizarSimulador' declarado ao incluir este objeto no SimuladorView
+const emit = defineEmits(['sumarizarSimulador']);
+
+const simulador = {
+  carreira: null,
+  auxilios: null,
+  gratificacoes: null,
+  previdencia: null
+}
+
+function setCarreira(carreira) {
+  simulador.carreira = carreira;
+
+  emit('sumarizarSimulador', simulador);
+}
+
 </script>
 
 <template>
@@ -24,7 +40,7 @@ import Carreira from '@/components/simulador/Carreira.vue';
     <div class="tab-pane fade show active" id="nav-carreira" role="tabpanel" 
       aria-labelledby="nav-carreira-tab" tabindex="0">
       
-      <Carreira />
+      <Carreira @calcularCarreira="setCarreira" />
 
     </div>
 

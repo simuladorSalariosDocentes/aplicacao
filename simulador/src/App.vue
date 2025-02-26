@@ -25,7 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="text-center p-4">
         <div>
           Desenvolvido como parte do projeto de pesquisa:<br> 
-          "Estudos de Frameworks Web Frontend: implementação de uma aplicação para simular os vencimentos mensais dos professores federais":
+          "Estudos de Frameworks Web Frontend: implementação de uma aplicação para simular os vencimentos mensais dos professores federais"
         </div>
         <a class="text-reset fw-bold" href="https://foz.ifpr.edu.br" target="blank">IFPR (Campus Foz do Iguaçu)</a>
       </div>
