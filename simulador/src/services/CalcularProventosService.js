@@ -1,5 +1,7 @@
 import { dadosClassesService } from "./dados/DadosClassesService";
 import { dadosTitulacoesService } from "./dados/DadosTitulacoesService";
+import { dadosAuxAlimentacaoService } from "./dados/DadosAuxAlimentacaoService";
+import { dadosRegimeService } from "./dados/DadosRegimeService";
 
 class CalcularProventosService {
 
@@ -27,6 +29,21 @@ class CalcularProventosService {
 
             if(percentualRT)
                 return valorVencBasico * (percentualRT.percentual / 100);
+        }
+
+        return 0;
+    }
+
+    calcularValeAlimentacao(vencimento) {
+        const valeAliment = 
+            dadosAuxAlimentacaoService.carregarRegistro(vencimento.auxilios.idAuxAlimentacao);
+
+        if(valeAliment) {
+            let percentValeAliment = 1;
+            if(vencimento.carreira.idRegime == dadosRegimeService.ID_REGIME_20H)
+                percentValeAliment = 0.5;
+
+            return valeAliment.valor * percentValeAliment;
         }
 
         return 0;

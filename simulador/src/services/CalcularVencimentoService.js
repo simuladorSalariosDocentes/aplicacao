@@ -5,13 +5,27 @@ class CalcularVencimentoService {
 
     calcularVencimento(vencimento) {
         
-        const vencBasico = calcularProventosService.calcularVencimentoBasico(vencimento);
-        const retribTit  = calcularProventosService.calcularRetribuicaoTitutacao(vencimento, vencBasico);
+        let salarioLiquido = 0;
+        let vencBasico = 0;
+        let retribTit = 0;
+        let valeAlimen = 0;
+
+        if(vencimento.carreira) {
+            vencBasico = calcularProventosService.calcularVencimentoBasico(vencimento);
+            retribTit  = calcularProventosService.calcularRetribuicaoTitutacao(vencimento, vencBasico);
+        }
+
+        if(vencimento.auxilios) {
+            valeAlimen = calcularProventosService.calcularValeAlimentacao(vencimento);
+        }
+
+        salarioLiquido = vencBasico + retribTit + valeAlimen;
         
         return {
+            salarioLiquido: salarioLiquido,
             vencimentoBasico: vencBasico,
             retribTitulacao: retribTit,
-            valeAlimentacao: 0
+            valeAlimentacao: valeAlimen
         };        
     }
 

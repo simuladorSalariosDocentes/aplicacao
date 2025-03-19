@@ -16,7 +16,8 @@ const simulador = reactive(
 
 const valoresVencimento = reactive(
   {
-    valores: { 
+    valores: {
+      salarioLiquido: 0, 
       vencimentoBasico: 0,
       retribTitulacao: 0,
       valeAlimentacao: 0
@@ -27,7 +28,6 @@ const valoresVencimento = reactive(
 function calcularVencimento(vencimento) {
   simulador.vencimento = vencimento;
 
-  //TODO - Chamar service para calcular o vencimento a partir dos dados do simulador
   valoresVencimento.valores = 
     calcularVencimentoService.calcularVencimento(simulador.vencimento);
   //console.log(valoresVencimento);
@@ -54,16 +54,10 @@ defineExpose({
       aria-labelledby="nav-vencimento-tab" tabindex="0">
       
       <div class="row g-3">
-        {{ simulador.vencimento.carreira ? simulador.vencimento.carreira.idVersao : 99}}
-        <!--
-        <br>
-        {{ simulador.vencimento.carreira.idRegime}}
-        -->
-
         <!--Linha 1-->
         <div class="col-12 fs-4 text">
           <span class="fw-bold">Salário líquido: </span>
-          <span>XXX</span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.salarioLiquido) }}</span>
         </div>
 
         <!--Linha 2-->
@@ -72,18 +66,18 @@ defineExpose({
         </div>
 
         <!--Linha 3-->
-        <div class="col-6">
+        <div class="col-12">
           <span class="fw-medium">Vencimento básico: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.vencimentoBasico) }}</span>
         </div>
 
-        <div class="col-6">
+        <div class="col-12" v-if="valoresVencimento.valores.retribTitulacao > 0">
           <span class="fw-medium">Retrib. por titulação: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.retribTitulacao) }}</span>
         </div>
 
         <!--Linha 4-->
-        <div class="col-6">
+        <div class="col-6" v-if="valoresVencimento.valores.valeAlimentacao > 0">
           <span class="fw-medium">Vale alimentação: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.valeAlimentacao) }}</span>
         </div>

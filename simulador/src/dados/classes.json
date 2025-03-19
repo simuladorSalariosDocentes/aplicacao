@@ -12,13 +12,13 @@
                     },
                     {
                         "idRegime": 2,
-                        "valor": 4326.60
+                        "valor": 4326.6
                     },
                     {
                         "idRegime": 3,
                         "valor": 3090.43
                     }
-                ]                 
+                ]
             },
             {
                 "id": 2,
@@ -26,7 +26,7 @@
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
-                        "valor": 6520.80
+                        "valor": 6520.8
                     },
                     {
                         "idRegime": 2,
@@ -34,7 +34,7 @@
                     },
                     {
                         "idRegime": 3,
-                        "valor": 3260.40
+                        "valor": 3260.4
                     }
                 ]
             },
@@ -134,7 +134,7 @@
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
-                        "valor": 10035.73
+                        "valor": 10035.7
                     },
                     {
                         "idRegime": 2,
@@ -152,7 +152,7 @@
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
-                        "valor": 10487.34
+                        "valor": 10487.3
                     },
                     {
                         "idRegime": 2,
@@ -170,11 +170,11 @@
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
-                        "valor": 11536.07
+                        "valor": 11536.1
                     },
                     {
                         "idRegime": 2,
-                        "valor": 8075.26
+                        "valor": 8075.27
                     },
                     {
                         "idRegime": 3,
@@ -184,49 +184,188 @@
             }
         ]
     },
-
     {
         "idVersao": 2,
         "classes": [
             {
                 "id": 11,
-                "descricao": "Entrada"
+                "descricao": "Entrada",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 6397.18
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 4478.03
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 3198.59
+                    }
+                ]
             },
             {
                 "id": 12,
-                "descricao": "Adjunto/DIII - Nível 1"
+                "descricao": "Adjunto/DIII - Nível 1",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 6781.01
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 4746.71
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 3390.51
+                    }
+                ]
             },
             {
                 "id": 13,
-                "descricao": "Adjunto/DIII - Nível 2"
+                "descricao": "Adjunto/DIII - Nível 2",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 7120.06
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 4984.05
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 3560.03
+                    }
+                ]
             },
             {
                 "id": 14,
-                "descricao": "Adjunto/DIII - Nível 3"
+                "descricao": "Adjunto/DIII - Nível 3",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 7476.06
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 5233.25
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 3738.03
+                    }
+                ]
             },
             {
                 "id": 15,
-                "descricao": "Adjunto/DIII - Nível 4"
+                "descricao": "Adjunto/DIII - Nível 4",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 7849.87
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 5494.91
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 3924.93
+                    }
+                ]
             },
             {
                 "id": 16,
-                "descricao": "Associado/DIV - Nível 1"
+                "descricao": "Associado/DIV - Nível 1",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 9616.09
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 6731.27
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 4808.04
+                    }
+                ]
             },
             {
                 "id": 17,
-                "descricao": "Associado/DIV - Nível 2"
+                "descricao": "Associado/DIV - Nível 2",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 10096.9
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 7067.83
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 5048.45
+                    }
+                ]
             },
             {
                 "id": 18,
-                "descricao": "Associado/DIV - Nível 3"
+                "descricao": "Associado/DIV - Nível 3",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 10601.7
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 7421.22
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 5300.87
+                    }
+                ]
             },
             {
                 "id": 19,
-                "descricao": "Associado/DIV - Nível 4"
+                "descricao": "Associado/DIV - Nível 4",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 11131.8
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 7792.29
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 5565.91
+                    }
+                ]
             },
             {
                 "id": 20,
-                "descricao": "Titular"
+                "descricao": "Titular",
+                "vencimentosBasicos": [
+                    {
+                        "idRegime": 1,
+                        "valor": 12245
+                    },
+                    {
+                        "idRegime": 2,
+                        "valor": 8571.51
+                    },
+                    {
+                        "idRegime": 3,
+                        "valor": 6122.5
+                    }
+                ]
             }
         ]
     }

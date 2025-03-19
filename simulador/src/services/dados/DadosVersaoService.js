@@ -1,9 +1,9 @@
-import Dados from "@/dados/versao.json";
+import Dados from "@/dados/versoes.json";
 
 class DadosVersaoService {
 
     carregarDados() {
-        return Dados;        
+        return Dados;       
     }
 
 }
