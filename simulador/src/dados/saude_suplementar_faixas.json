@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "descricao": "0 a 18 anos"
+    },
+    {
+        "id": 2,
+        "descricao": "19 a 23 anos"
+    },
+    {
+        "id": 3,
+        "descricao": "24 a 28 anos"
+    },
+    {
+        "id": 4,
+        "descricao": "29 a 33 anos"
+    },
+    {
+        "id": 5,
+        "descricao": "34 a 38 anos"
+    },
+    {
+        "id": 6,
+        "descricao": "39 a 43 anos"
+    },
+    {
+        "id": 7,
+        "descricao": "44 a 48 anos"
+    },
+    {
+        "id": 8,
+        "descricao": "49 a 53 anos"
+    },
+    {
+        "id": 9,
+        "descricao": "54 a 58 anos"
+    },
+    {
+        "id": 10,
+        "descricao": "59 ou mais anos"
+    }
+]

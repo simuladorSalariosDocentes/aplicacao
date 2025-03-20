@@ -2,6 +2,8 @@ import { dadosClassesService } from "./dados/DadosClassesService";
 import { dadosTitulacoesService } from "./dados/DadosTitulacoesService";
 import { dadosAuxAlimentacaoService } from "./dados/DadosAuxAlimentacaoService";
 import { dadosRegimeService } from "./dados/DadosRegimeService";
+import { dadosSaudeSuplementarValoresService } from "./dados/DadosSaudeSuplementarValoresService";
+
 
 class CalcularProventosService {
 
@@ -47,6 +49,41 @@ class CalcularProventosService {
         }
 
         return 0;
+    }
+
+    calcularSaudeSuplementar(vencimento, renda) {
+        let valor = 0;
+        
+        const saudeVersao = 
+            dadosSaudeSuplementarValoresService.
+                carregarRegistrosPorVersao(vencimento.auxilios.saudeSup.idSaudeSupVersao);
+
+        if(saudeVersao) {
+            //Titular
+            if(vencimento.auxilios.saudeSup.idSaudeSupTit > 0) {
+                const faixa = saudeVersao.faixas.find((faixa) => faixa.id == vencimento.auxilios.saudeSup.idSaudeSupTit);
+                if(faixa) {
+                    const valorFaixaRenda = faixa.valores.find((v) => renda >= v.valorRendaInicial && renda <= v.valorRendaFinal);
+                    if(valorFaixaRenda)
+                        valor += valorFaixaRenda.valorBeneficio;
+                }
+            }
+
+            //Dependentes
+            if(vencimento.auxilios.saudeSup.dependentes.length > 0) {
+                console.log(vencimento.auxilios.saudeSup.dependentes);
+                vencimento.auxilios.saudeSup.dependentes.forEach(dep => {
+                    const faixa = saudeVersao.faixas.find((faixa) => faixa.id == dep.idSaudeSup);
+                    if(faixa) {
+                        const valorFaixaRenda = faixa.valores.find((v) => renda >= v.valorRendaInicial && renda <= v.valorRendaFinal);
+                        if(valorFaixaRenda)
+                            valor += valorFaixaRenda.valorBeneficio;
+                    }
+                });
+            }
+        }
+
+        return valor;
     }
 
 }

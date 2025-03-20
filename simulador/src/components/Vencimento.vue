@@ -20,7 +20,10 @@ const valoresVencimento = reactive(
       salarioLiquido: 0, 
       vencimentoBasico: 0,
       retribTitulacao: 0,
-      valeAlimentacao: 0
+      valeAlimentacao: 0,
+      saudeSuplementar: 0,
+      auxTransporte: 0,
+      auxCreche: 0
     }
   }
 );
@@ -54,18 +57,17 @@ defineExpose({
       aria-labelledby="nav-vencimento-tab" tabindex="0">
       
       <div class="row g-3">
-        <!--Linha 1-->
+
         <div class="col-12 fs-4 text">
           <span class="fw-bold">Salário líquido: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.salarioLiquido) }}</span>
         </div>
 
-        <!--Linha 2-->
+        <!-- Proventos -->
         <div class="col-12 fs-5">
           <span class="fw-bold">Proventos</span>
         </div>
 
-        <!--Linha 3-->
         <div class="col-12">
           <span class="fw-medium">Vencimento básico: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.vencimentoBasico) }}</span>
@@ -76,13 +78,27 @@ defineExpose({
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.retribTitulacao) }}</span>
         </div>
 
-        <!--Linha 4-->
-        <div class="col-6" v-if="valoresVencimento.valores.valeAlimentacao > 0">
+        <div class="col-12" v-if="valoresVencimento.valores.valeAlimentacao > 0">
           <span class="fw-medium">Vale alimentação: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.valeAlimentacao) }}</span>
         </div>
 
-        <!--Linha 5-->
+        <div class="col-12" v-if="valoresVencimento.valores.saudeSuplementar > 0">
+          <span class="fw-medium">Saúde suplementar: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.saudeSuplementar) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.auxTransporte > 0">
+          <span class="fw-medium">Auxílio transporte: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxTransporte) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.auxCreche > 0">
+          <span class="fw-medium">Auxílio creche: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxCreche) }}</span>
+        </div>
+
+        <!-- Descontos -->
         <div class="col-12 fs-5">
           <span class="fw-bold">Descontos</span>
         </div>

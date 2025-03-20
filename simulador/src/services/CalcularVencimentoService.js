@@ -9,6 +9,7 @@ class CalcularVencimentoService {
         let vencBasico = 0;
         let retribTit = 0;
         let valeAlimen = 0;
+        let saudeSup = 0;
 
         if(vencimento.carreira) {
             vencBasico = calcularProventosService.calcularVencimentoBasico(vencimento);
@@ -17,15 +18,19 @@ class CalcularVencimentoService {
 
         if(vencimento.auxilios) {
             valeAlimen = calcularProventosService.calcularValeAlimentacao(vencimento);
+            saudeSup   = calcularProventosService.calcularSaudeSuplementar(vencimento, (vencBasico + retribTit));
         }
 
-        salarioLiquido = vencBasico + retribTit + valeAlimen;
+        salarioLiquido = vencBasico + retribTit + valeAlimen + saudeSup;
         
         return {
             salarioLiquido: salarioLiquido,
             vencimentoBasico: vencBasico,
             retribTitulacao: retribTit,
-            valeAlimentacao: valeAlimen
+            valeAlimentacao: valeAlimen,
+            saudeSuplementar: saudeSup,
+            auxTransporte: 10,
+            auxCreche: 10
         };        
     }
 

@@ -63,7 +63,7 @@ function atualizarVencimento(event) {
 
   <div class="row g-3">
 
-    <!--Linha 1-->
+    <!--Versão-->
     <div class="col-8">
       <label for="selVersao" class="form-label">Versão</label>
       <select id="selVersao" class="form-select" v-model="carreira.idVersao" @change="atualizarVencimento">
@@ -71,7 +71,7 @@ function atualizarVencimento(event) {
       </select>
     </div>
 
-    <!--Linha 2-->
+    <!--Classe e Regime -->
     <div class="col-6">
       <label for="selClasse" class="form-label">Classe</label>
       <select id="selClasse" class="form-select" v-model="carreira.idClasse" @change="atualizarVencimento">
@@ -86,7 +86,7 @@ function atualizarVencimento(event) {
       </select>
     </div>
 
-    <!--Linha 3-->
+    <!-- RT -->
     <div class="col-8">
       <label for="selRT" class="form-label">Retribuição por Titulação</label>
       <select id="selRT" class="form-select" v-model="carreira.idRT" @change="atualizarVencimento">

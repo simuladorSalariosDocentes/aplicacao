@@ -1,0 +1,457 @@
+[
+    {
+        "idSaudeVersao": 1,
+        "faixas": [
+            {
+                "id": 1,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 254.18
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 196.34
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 160.8
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 142.18
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 132.03
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 121.87
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 111.72
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 106.64
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 266.17
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 207.65
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 162.92
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 144.16
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 133.86
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 123.56
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 113.27
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 108.12
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 269.77
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 211.02
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 166.1
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 147.11
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 136.6
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 126.1
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 115.59
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 110.33
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 297.07
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 230.21
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 178.29
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 158.69
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 148.11
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 137.53
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 126.95
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 116.37
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 305.95
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 238.6
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 186.21
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 166.1
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 155.02
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 143.95
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 132.88
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 121.8
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 316.1
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 248.2
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 195.23
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 174.57
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 162.93
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 151.29
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 139.66
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 128.02
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 361.06
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 280.87
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 210.12
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 187.87
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 176.13
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 164.39
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 152.65
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 140.9
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 366.8
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 285.34
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 213.45
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 190.85
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 178.92
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 166.99
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 155.06
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 143.14
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 372.51
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 289.9
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 216.78
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 193.82
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 181.71
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 169.6
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 157.48
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 145.37
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "valores": [
+                    {
+                        "valorRendaInicial": 0,
+                        "valorRendaFinal": 3000,
+                        "valorBeneficio": 411.26
+                    },
+                    {
+                        "valorRendaInicial": 3001,
+                        "valorRendaFinal": 6000,
+                        "valorBeneficio": 321.04
+                    },
+                    {
+                        "valorRendaInicial": 6001,
+                        "valorRendaFinal": 9000,
+                        "valorBeneficio": 235.28
+                    },
+                    {
+                        "valorRendaInicial": 9001,
+                        "valorRendaFinal": 12000,
+                        "valorBeneficio": 211.36
+                    },
+                    {
+                        "valorRendaInicial": 12001,
+                        "valorRendaFinal": 15000,
+                        "valorBeneficio": 198.93
+                    },
+                    {
+                        "valorRendaInicial": 15001,
+                        "valorRendaFinal": 18000,
+                        "valorBeneficio": 186.5
+                    },
+                    {
+                        "valorRendaInicial": 18001,
+                        "valorRendaFinal": 21000,
+                        "valorBeneficio": 174.06
+                    },
+                    {
+                        "valorRendaInicial": 21001,
+                        "valorRendaFinal": 1000000,
+                        "valorBeneficio": 161.63
+                    }
+                ]
+            }
+        ]
+    }
+]
