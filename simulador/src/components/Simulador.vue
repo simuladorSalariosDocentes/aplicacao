@@ -1,8 +1,9 @@
 <script setup>
 import Carreira from '@/components/simulador/Carreira.vue';
 import AuxiliosBeneficios from './simulador/AuxiliosBeneficios.vue';
+import Gratificacoes from './simulador/Gratificacoes.vue';
 
-//Emitter 'sumarizarSimulador' declarado ao incluir este objeto no SimuladorView
+//Emitter 'sumarizarSimulador' declarado ao incluir este componente no SimuladorView
 const emit = defineEmits(['sumarizarSimulador']);
 
 const simulador = {
@@ -20,6 +21,12 @@ function setCarreira(carreira) {
 
 function setAuxilios(auxilios) {
   simulador.auxilios = auxilios;
+
+  emit('sumarizarSimulador', simulador);
+}
+
+function setGratificacoes(gratificacoes) {
+  simulador.gratificacoes = gratificacoes;
 
   emit('sumarizarSimulador', simulador);
 }
@@ -58,7 +65,7 @@ function setAuxilios(auxilios) {
     
     <div class="tab-pane fade" id="nav-gratificacoes" role="tabpanel" 
       aria-labelledby="nav-gratificacoes-tab" tabindex="0">
-      Gratificações
+      <Gratificacoes @calcularGratificacoes="setGratificacoes" />
     </div>
     
     <div class="tab-pane fade" id="nav-previdencia" role="tabpanel" 

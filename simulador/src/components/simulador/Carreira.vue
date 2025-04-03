@@ -64,7 +64,7 @@ function atualizarVencimento(event) {
   <div class="row g-3">
 
     <!--Versão-->
-    <div class="col-8">
+    <div class="col-9">
       <label for="selVersao" class="form-label">Versão</label>
       <select id="selVersao" class="form-select" v-model="carreira.idVersao" @change="atualizarVencimento">
         <option v-for="versao in dados.versoes" :value="versao.id">{{ versao.descricao }}</option>
@@ -87,7 +87,7 @@ function atualizarVencimento(event) {
     </div>
 
     <!-- RT -->
-    <div class="col-8">
+    <div class="col-9">
       <label for="selRT" class="form-label">Retribuição por Titulação</label>
       <select id="selRT" class="form-select" v-model="carreira.idRT" @change="atualizarVencimento">
         <option v-for="tit in dados.titulacoes" :value="tit.id">{{ tit.descricao }}</option>

@@ -2,7 +2,9 @@ import { dadosClassesService } from "./dados/DadosClassesService";
 import { dadosTitulacoesService } from "./dados/DadosTitulacoesService";
 import { dadosAuxAlimentacaoService } from "./dados/DadosAuxAlimentacaoService";
 import { dadosRegimeService } from "./dados/DadosRegimeService";
+import { dadosAuxTransporteService } from "./dados/DadosAuxTransporteService";
 import { dadosSaudeSuplementarValoresService } from "./dados/DadosSaudeSuplementarValoresService";
+import { dadosAuxPreEscolar } from "./dados/DadosAuxPreEscolar";
 
 
 class CalcularProventosService {
@@ -84,6 +86,43 @@ class CalcularProventosService {
         }
 
         return valor;
+    }
+
+    calcularAuxilioTransporte(vencimento, vencBasico) {
+        let valor = 0;
+
+        if(vencimento.auxilios.auxTranporte.ativo) {
+            let gastoDiario = vencimento.auxilios.auxTranporte.gastoDiario;
+            if(isNaN(gastoDiario))
+                gastoDiario = 0;
+            //Arredondar para cima em múltiplos de 0.2
+            gastoDiario = Math.ceil(gastoDiario / 0.2) * 0.2;
+            
+            let diasTrabalhados = vencimento.auxilios.auxTranporte.diasTrabalhados;
+            if(isNaN(diasTrabalhados))
+                diasTrabalhados = 0;
+            if(diasTrabalhados > dadosAuxTransporteService.MAXIMO_DIAS_TRABALHADOS)
+                diasTrabalhados = dadosAuxTransporteService.MAXIMO_DIAS_TRABALHADOS;
+
+            let valorGastoNoMes = gastoDiario * diasTrabalhados;
+
+            if(valorGastoNoMes > 0) 
+                valor = valorGastoNoMes - (vencBasico * 
+                                           dadosAuxTransporteService.FATOR_DIAS_BASE_CALCULA * 
+                                           dadosAuxTransporteService.PERCENTUAL_AUXILIO);
+        }
+
+        return (valor > 0 ? valor : 0);
+    }
+
+    calcularAuxilioPreEscolar(vencimento) {
+        const preEscola = 
+            dadosAuxPreEscolar.carregarRegistro(vencimento.auxilios.idAuxPreEscolar);
+
+        if(preEscola)
+            return preEscola.valor;
+
+        return 0;
     }
 
 }

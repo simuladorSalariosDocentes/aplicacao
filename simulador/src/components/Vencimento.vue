@@ -18,12 +18,14 @@ const valoresVencimento = reactive(
   {
     valores: {
       salarioLiquido: 0, 
+
+      proventos: 0,
       vencimentoBasico: 0,
       retribTitulacao: 0,
       valeAlimentacao: 0,
       saudeSuplementar: 0,
       auxTransporte: 0,
-      auxCreche: 0
+      auxPreEscolar: 0
     }
   }
 );
@@ -65,7 +67,8 @@ defineExpose({
 
         <!-- Proventos -->
         <div class="col-12 fs-5">
-          <span class="fw-bold">Proventos</span>
+          <span class="fw-bold">Proventos: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.proventos) }}</span>
         </div>
 
         <div class="col-12">
@@ -93,14 +96,14 @@ defineExpose({
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxTransporte) }}</span>
         </div>
 
-        <div class="col-12" v-if="valoresVencimento.valores.auxCreche > 0">
-          <span class="fw-medium">Auxílio creche: </span>
-          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxCreche) }}</span>
+        <div class="col-12" v-if="valoresVencimento.valores.auxPreEscolar > 0">
+          <span class="fw-medium">Auxílio Pré-escolar: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxPreEscolar) }}</span>
         </div>
 
         <!-- Descontos -->
         <div class="col-12 fs-5">
-          <span class="fw-bold">Descontos</span>
+          <span class="fw-bold">Descontos: </span>
         </div>
 
       </div>
