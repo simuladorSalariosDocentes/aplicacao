@@ -1,6 +1,6 @@
 import Dados from "@/dados/aux_pre_escolar.json";
 
-class DadosAuxPreEscolar {
+class DadosAuxPreEscolarService {
 
     carregarDados() {
         const dados = Dados;
@@ -20,4 +20,4 @@ class DadosAuxPreEscolar {
 
 }
 
-export const dadosAuxPreEscolar = new DadosAuxPreEscolar();
+export const dadosAuxPreEscolarService = new DadosAuxPreEscolarService();

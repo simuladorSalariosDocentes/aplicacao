@@ -25,7 +25,12 @@ const valoresVencimento = reactive(
       valeAlimentacao: 0,
       saudeSuplementar: 0,
       auxTransporte: 0,
-      auxPreEscolar: 0
+      auxPreEscolar: 0,
+      gratificacaoFCC: 0,
+      gratificacaoFG: 0,
+      gratificacaoCD: 0
+
+
     }
   }
 );
@@ -99,6 +104,21 @@ defineExpose({
         <div class="col-12" v-if="valoresVencimento.valores.auxPreEscolar > 0">
           <span class="fw-medium">Auxílio Pré-escolar: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxPreEscolar) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.gratificacaoFCC > 0">
+          <span class="fw-medium">FCC: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.gratificacaoFCC) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.gratificacaoFG > 0">
+          <span class="fw-medium">FG: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.gratificacaoFG) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.gratificacaoCD > 0">
+          <span class="fw-medium">CD: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.gratificacaoCD) }}</span>
         </div>
 
         <!-- Descontos -->

@@ -53,9 +53,7 @@ function setGratificacoes(gratificacoes) {
   <div class="tab-content border border-light-subtle p-3" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-carreira" role="tabpanel" 
       aria-labelledby="nav-carreira-tab" tabindex="0">
-      
       <Carreira @calcularCarreira="setCarreira" />
-
     </div>
 
     <div class="tab-pane fade" id="nav-auxilios" role="tabpanel" 

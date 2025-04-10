@@ -1,0 +1,102 @@
+[
+    {
+        "idFGVersao": 1,
+        "valores": [
+            {
+                "id": 1,
+                "descricao": "FG-1",
+                "valor": 1159.01
+            },
+            {
+                "id": 2,
+                "descricao": "FG-2",
+                "valor": 779.73
+            },
+            {
+                "id": 3,
+                "descricao": "FG-3",
+                "valor": 632.16
+            },
+            {
+                "id": 4,
+                "descricao": "FG-4",
+                "valor": 295.2
+            },
+            {
+                "id": 5,
+                "descricao": "FG-5",
+                "valor": 239.54
+            },
+            {
+                "id": 6,
+                "descricao": "FG-6",
+                "valor": 175.64
+            },
+            {
+                "id": 7,
+                "descricao": "FG-7",
+                "valor": 112.02
+            },
+            {
+                "id": 8,
+                "descricao": "FG-8",
+                "valor": 82.86
+            },
+            {
+                "id": 9,
+                "descricao": "FG-9",
+                "valor": 67.22
+            }
+        ]
+    },
+    {
+        "idFGVersao": 2,
+        "valores": [
+            {
+                "id": 10,
+                "descricao": "FG-1",
+                "valor": 1263.32
+            },
+            {
+                "id": 11,
+                "descricao": "FG-2",
+                "valor": 849.91
+            },
+            {
+                "id": 12,
+                "descricao": "FG-3",
+                "valor": 689.05
+            },
+            {
+                "id": 13,
+                "descricao": "FG-4",
+                "valor": 321.77
+            },
+            {
+                "id": 14,
+                "descricao": "FG-5",
+                "valor": 261.1
+            },
+            {
+                "id": 15,
+                "descricao": "FG-6",
+                "valor": 191.45
+            },
+            {
+                "id": 16,
+                "descricao": "FG-7",
+                "valor": 122.1
+            },
+            {
+                "id": 17,
+                "descricao": "FG-8",
+                "valor": 90.32
+            },
+            {
+                "id": 18,
+                "descricao": "FG-9",
+                "valor": 73.27
+            }
+        ]
+    }
+]

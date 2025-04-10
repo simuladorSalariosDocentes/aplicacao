@@ -14,6 +14,9 @@ class CalcularVencimentoService {
         let saudeSup = 0;
         let auxTransp = 0;
         let auxPreEscolar = 0;
+        let gratificFCC = 0;
+        let gratificFG = 0;
+        let gratificCD = 0;
         
         let descontos = 0;
 
@@ -28,9 +31,16 @@ class CalcularVencimentoService {
             auxTransp     = calcularProventosService.calcularAuxilioTransporte(vencimento, vencBasico);
             auxPreEscolar = calcularProventosService.calcularAuxilioPreEscolar(vencimento);
         }
+        
+        if(vencimento.gratificacoes) {
+            gratificFCC = calcularProventosService.calcularGratificacaoFCC(vencimento);
+            gratificFG  = calcularProventosService.calcularGratificacaoFG(vencimento);
+        }
 
-
-        proventos = vencBasico + retribTit + valeAlimen + saudeSup + auxTransp + auxPreEscolar;
+        proventos = vencBasico + retribTit + 
+                    valeAlimen + saudeSup + auxTransp + auxPreEscolar +
+                    gratificFCC + gratificFG + gratificCD;
+        
         salarioLiquido = proventos - descontos;
         
         return {
@@ -42,7 +52,10 @@ class CalcularVencimentoService {
             valeAlimentacao: valeAlimen,
             saudeSuplementar: saudeSup,
             auxTransporte: auxTransp,
-            auxPreEscolar: auxPreEscolar
+            auxPreEscolar: auxPreEscolar,
+            gratificacaoFCC: gratificFCC,
+            gratificacaoFG: gratificFG,
+            gratificacaoCD: gratificCD
         };        
     }
 

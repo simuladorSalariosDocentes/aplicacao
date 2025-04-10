@@ -6,7 +6,7 @@ import { formatarNumero } from '@/utils/FormatarNumero';
 import { dadosAuxAlimentacaoService } from "@/services/dados/DadosAuxAlimentacaoService.js";
 import { dadosSaudeSuplementarFaixasService } from "@/services/dados/DadosSaudeSuplementarFaixasService.js";
 import { dadosSaudeSuplementarVersoesService } from "@/services/dados/DadosSaudeSuplementarVersoesService.js";
-import { dadosAuxPreEscolar } from '@/services/dados/DadosAuxPreEscolar';
+import { dadosAuxPreEscolarService } from '@/services/dados/DadosAuxPreEscolarService';
 
 //Emitter 'calcularAuxilios' declarado ao incluir este objeto no Simulador
 const emit = defineEmits(['calcularAuxilios']);
@@ -45,7 +45,7 @@ onMounted(() => {
   dados.saudeSuplementarVersoes = dadosSaudeSuplementarVersoesService.carregarDados();
   dados.saudeSuplementarFaixas = dadosSaudeSuplementarFaixasService.carregarDados();
 
-  dados.auxiliosPreEscolar = dadosAuxPreEscolar.carregarDados();
+  dados.auxiliosPreEscolar = dadosAuxPreEscolarService.carregarDados();
 
   atualizarVencimento();
 });

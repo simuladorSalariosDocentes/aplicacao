@@ -4,7 +4,9 @@ import { dadosAuxAlimentacaoService } from "./dados/DadosAuxAlimentacaoService";
 import { dadosRegimeService } from "./dados/DadosRegimeService";
 import { dadosAuxTransporteService } from "./dados/DadosAuxTransporteService";
 import { dadosSaudeSuplementarValoresService } from "./dados/DadosSaudeSuplementarValoresService";
-import { dadosAuxPreEscolar } from "./dados/DadosAuxPreEscolar";
+import { dadosAuxPreEscolarService } from "./dados/DadosAuxPreEscolarService";
+import { dadosGratificacoesFCCService } from "./dados/DadosGratificacoesFCCService";
+import { dadosGratificacoesFGValoresService } from "./dados/DadosGratificacoesFGValoresService";
 
 
 class CalcularProventosService {
@@ -116,11 +118,33 @@ class CalcularProventosService {
     }
 
     calcularAuxilioPreEscolar(vencimento) {
-        const preEscola = 
-            dadosAuxPreEscolar.carregarRegistro(vencimento.auxilios.idAuxPreEscolar);
+        const preEscolar = 
+            dadosAuxPreEscolarService.carregarRegistro(vencimento.auxilios.idAuxPreEscolar);
 
-        if(preEscola)
-            return preEscola.valor;
+        if(preEscolar)
+            return preEscolar.valor;
+
+        return 0;
+    }
+
+    calcularGratificacaoFCC(vencimento) {
+        const fcc = 
+            dadosGratificacoesFCCService.carregarRegistro(vencimento.gratificacoes.idFCC);
+
+        if(fcc)
+            return fcc.valor;
+
+        return 0;
+    }
+
+    calcularGratificacaoFG(vencimento) {
+        if(vencimento.gratificacoes.fg.idFGVersao > 0) {
+            const fgValor = 
+                dadosGratificacoesFGValoresService.carregarRegistro(vencimento.gratificacoes.fg.idFGValor);
+
+            if(fgValor)
+                return fgValor.valor;
+        }
 
         return 0;
     }
