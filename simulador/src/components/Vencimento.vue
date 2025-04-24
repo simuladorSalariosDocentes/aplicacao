@@ -76,7 +76,7 @@ defineExpose({
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.proventos) }}</span>
         </div>
 
-        <div class="col-12">
+        <div class="col-12" v-if="valoresVencimento.valores.vencimentoBasico > 0">
           <span class="fw-medium">Vencimento básico: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.vencimentoBasico) }}</span>
         </div>
@@ -102,7 +102,7 @@ defineExpose({
         </div>
 
         <div class="col-12" v-if="valoresVencimento.valores.auxPreEscolar > 0">
-          <span class="fw-medium">Auxílio Pré-escolar: </span>
+          <span class="fw-medium">Auxílio pré-escolar: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.auxPreEscolar) }}</span>
         </div>
 

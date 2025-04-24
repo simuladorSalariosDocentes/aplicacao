@@ -1,4 +1,5 @@
 import { calcularProventosService } from "@/services/CalcularProventosService";
+import { dadosGratificacoesCDValoresService } from "./dados/DadosGratificacoesCDValoresService";
 
 
 class CalcularVencimentoService {
@@ -17,12 +18,25 @@ class CalcularVencimentoService {
         let gratificFCC = 0;
         let gratificFG = 0;
         let gratificCD = 0;
+        let percentualCD = 0;
         
         let descontos = 0;
 
+        if(vencimento.gratificacoes) {
+            gratificFCC  = calcularProventosService.calcularGratificacaoFCC(vencimento);
+            gratificFG   = calcularProventosService.calcularGratificacaoFG(vencimento);
+            gratificCD   = calcularProventosService.calcularGratificacaoCD(vencimento);
+            percentualCD = vencimento.gratificacoes.cd.percentual;
+        }
+
         if(vencimento.carreira) {
-            vencBasico = calcularProventosService.calcularVencimentoBasico(vencimento);
-            retribTit  = calcularProventosService.calcularRetribuicaoTitutacao(vencimento, vencBasico);
+            if(percentualCD == dadosGratificacoesCDValoresService.PERCENTUAL_100) {
+                //Quando a CD é 100%, não considera-se o vencimento do cargo
+                vencBasico = gratificCD;
+            } else {
+                vencBasico = calcularProventosService.calcularVencimentoBasico(vencimento);
+                retribTit  = calcularProventosService.calcularRetribuicaoTitutacao(vencimento, vencBasico);
+            }
         }
 
         if(vencimento.auxilios) {
@@ -32,9 +46,10 @@ class CalcularVencimentoService {
             auxPreEscolar = calcularProventosService.calcularAuxilioPreEscolar(vencimento);
         }
         
-        if(vencimento.gratificacoes) {
-            gratificFCC = calcularProventosService.calcularGratificacaoFCC(vencimento);
-            gratificFG  = calcularProventosService.calcularGratificacaoFG(vencimento);
+        if(percentualCD == dadosGratificacoesCDValoresService.PERCENTUAL_100) {
+            //Quando a CD é 100%, não considera-se o vencimento do cargo
+            //Após calcular os auxílios, deve-se zerar o vencimeno básico, pois será o valor da CD
+            vencBasico = 0;
         }
 
         proventos = vencBasico + retribTit + 

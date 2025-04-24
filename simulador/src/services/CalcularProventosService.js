@@ -7,6 +7,7 @@ import { dadosSaudeSuplementarValoresService } from "./dados/DadosSaudeSuplement
 import { dadosAuxPreEscolarService } from "./dados/DadosAuxPreEscolarService";
 import { dadosGratificacoesFCCService } from "./dados/DadosGratificacoesFCCService";
 import { dadosGratificacoesFGValoresService } from "./dados/DadosGratificacoesFGValoresService";
+import { dadosGratificacoesCDValoresService } from "./dados/DadosGratificacoesCDValoresService";
 
 
 class CalcularProventosService {
@@ -144,6 +145,19 @@ class CalcularProventosService {
 
             if(fgValor)
                 return fgValor.valor;
+        }
+
+        return 0;
+    }
+
+    calcularGratificacaoCD(vencimento) {
+        if(vencimento.gratificacoes.cd.idCDVersao > 0) {
+            const cdValor = 
+                dadosGratificacoesCDValoresService.carregarRegistro(vencimento.gratificacoes.cd.idCDValor);
+
+            if(cdValor)
+                return dadosGratificacoesCDValoresService.getValorComPercentual(
+                            cdValor.valor, vencimento.gratificacoes.cd.percentual);
         }
 
         return 0;

@@ -1,0 +1,52 @@
+[
+    {
+        "idCDVersao": 1,
+        "valores": [
+            {
+                "id": 1,
+                "descricao": "CD-1",
+                "valor": 18064.8
+            },
+            {
+                "id": 2,
+                "descricao": "CD-2",
+                "valor": 14364.4
+            },
+            {
+                "id": 3,
+                "descricao": "CD-3",
+                "valor": 11276.7
+            },
+            {
+                "id": 4,
+                "descricao": "CD-4",
+                "valor": 7629.1
+            }
+        ]
+    },
+    {
+        "idCDVersao": 2,
+        "valores": [
+            {
+                "id": 5,
+                "descricao": "CD-1",
+                "valor": 22219.6
+            },
+            {
+                "id": 6,
+                "descricao": "CD-2",
+                "valor": 16806.3
+            },
+            {
+                "id": 7,
+                "descricao": "CD-3",
+                "valor": 12291.6
+            },
+            {
+                "id": 8,
+                "descricao": "CD-4",
+                "valor": 8315.71
+            }
+        ]
+    }
+]

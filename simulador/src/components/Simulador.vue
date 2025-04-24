@@ -46,7 +46,7 @@ function setGratificacoes(gratificacoes) {
         role="tab" aria-controls="nav-gratificacoes" aria-selected="false">Gratificações</button>
       
       <button class="nav-link" id="nav-previdencia-tab" data-bs-toggle="tab" data-bs-target="#nav-previdencia" type="button"
-        role="tab" aria-controls="nav-previdencia" aria-selected="false">Previdência</button>
+        role="tab" aria-controls="nav-previdencia" aria-selected="false">Previdência e IR</button>
     </div>
   </nav>
 
