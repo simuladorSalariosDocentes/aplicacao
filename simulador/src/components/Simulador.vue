@@ -2,6 +2,7 @@
 import Carreira from '@/components/simulador/Carreira.vue';
 import AuxiliosBeneficios from './simulador/AuxiliosBeneficios.vue';
 import Gratificacoes from './simulador/Gratificacoes.vue';
+import PrevidenciaIR from './simulador/PrevidenciaIR.vue';
 
 //Emitter 'sumarizarSimulador' declarado ao incluir este componente no SimuladorView
 const emit = defineEmits(['sumarizarSimulador']);
@@ -10,7 +11,8 @@ const simulador = {
   carreira: null,
   auxilios: null,
   gratificacoes: null,
-  previdencia: null
+  previdencia: null,
+  ir: null
 }
 
 function setCarreira(carreira) {
@@ -27,6 +29,14 @@ function setAuxilios(auxilios) {
 
 function setGratificacoes(gratificacoes) {
   simulador.gratificacoes = gratificacoes;
+
+  emit('sumarizarSimulador', simulador);
+}
+
+function setPrevidenciaIR(previdencia, ir) {
+  console.log("passou");
+  simulador.previdencia = previdencia;
+  simulador.ir          = ir;
 
   emit('sumarizarSimulador', simulador);
 }
@@ -68,7 +78,7 @@ function setGratificacoes(gratificacoes) {
     
     <div class="tab-pane fade" id="nav-previdencia" role="tabpanel" 
       aria-labelledby="nav-previdencia-tab" tabindex="0">
-      Previdência
+      <PrevidenciaIR @calcularPrevidenciaIR="setPrevidenciaIR" />
     </div>
   </div>
 

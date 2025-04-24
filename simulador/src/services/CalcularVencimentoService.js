@@ -1,11 +1,11 @@
 import { calcularProventosService } from "@/services/CalcularProventosService";
+import { calcularDescontosService } from "@/services/CalcularDescontosService";
 import { dadosGratificacoesCDValoresService } from "./dados/DadosGratificacoesCDValoresService";
 
 
 class CalcularVencimentoService {
 
     calcularVencimento(vencimento) {
-        
         let salarioLiquido = 0;
         
         let proventos = 0;
@@ -21,6 +21,7 @@ class CalcularVencimentoService {
         let percentualCD = 0;
         
         let descontos = 0;
+        let ir = 0;          
 
         if(vencimento.gratificacoes) {
             gratificFCC  = calcularProventosService.calcularGratificacaoFCC(vencimento);
@@ -45,6 +46,11 @@ class CalcularVencimentoService {
             auxTransp     = calcularProventosService.calcularAuxilioTransporte(vencimento, vencBasico);
             auxPreEscolar = calcularProventosService.calcularAuxilioPreEscolar(vencimento);
         }
+
+        if(vencimento.ir) {
+            ir = calcularDescontosService.calcularIR(vencimento);
+        }
+
         
         if(percentualCD == dadosGratificacoesCDValoresService.PERCENTUAL_100) {
             //Quando a CD é 100%, não considera-se o vencimento do cargo
@@ -52,10 +58,12 @@ class CalcularVencimentoService {
             vencBasico = 0;
         }
 
+        
+
         proventos = vencBasico + retribTit + 
                     valeAlimen + saudeSup + auxTransp + auxPreEscolar +
                     gratificFCC + gratificFG + gratificCD;
-        
+
         salarioLiquido = proventos - descontos;
         
         return {
