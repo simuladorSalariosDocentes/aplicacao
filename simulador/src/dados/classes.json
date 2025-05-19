@@ -4,7 +4,7 @@
         "classes": [
             {
                 "id": 1,
-                "descricao": "Entrada",
+                "descricao": "A/Assistente - Nível 1",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -22,7 +22,7 @@
             },
             {
                 "id": 2,
-                "descricao": "Adjunto/DIII - Nível 1",
+                "descricao": "B/Adjunto - Nível 1",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -40,7 +40,7 @@
             },
             {
                 "id": 3,
-                "descricao": "Adjunto/DIII - Nível 2",
+                "descricao": "B/Adjunto - Nível 2",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -58,7 +58,7 @@
             },
             {
                 "id": 4,
-                "descricao": "Adjunto/DIII - Nível 3",
+                "descricao": "B/Adjunto - Nível 3",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -76,7 +76,7 @@
             },
             {
                 "id": 5,
-                "descricao": "Adjunto/DIII - Nível 4",
+                "descricao": "B/Adjunto - Nível 4",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -94,7 +94,7 @@
             },
             {
                 "id": 6,
-                "descricao": "Associado/DIV - Nível 1",
+                "descricao": "C/Associado - Nível 1",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -112,7 +112,7 @@
             },
             {
                 "id": 7,
-                "descricao": "Associado/DIV - Nível 2",
+                "descricao": "C/Associado - Nível 2",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -130,7 +130,7 @@
             },
             {
                 "id": 8,
-                "descricao": "Associado/DIV - Nível 3",
+                "descricao": "C/Associado - Nível 3",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -148,7 +148,7 @@
             },
             {
                 "id": 9,
-                "descricao": "Associado/DIV - Nível 4",
+                "descricao": "C/Associado - Nível 4",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -189,7 +189,7 @@
         "classes": [
             {
                 "id": 11,
-                "descricao": "Entrada",
+                "descricao": "A/Assistente - Nível 1",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -207,7 +207,7 @@
             },
             {
                 "id": 12,
-                "descricao": "Adjunto/DIII - Nível 1",
+                "descricao": "B/Adjunto - Nível 1",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -225,7 +225,7 @@
             },
             {
                 "id": 13,
-                "descricao": "Adjunto/DIII - Nível 2",
+                "descricao": "B/Adjunto - Nível 2",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -243,7 +243,7 @@
             },
             {
                 "id": 14,
-                "descricao": "Adjunto/DIII - Nível 3",
+                "descricao": "B/Adjunto - Nível 3",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -261,7 +261,7 @@
             },
             {
                 "id": 15,
-                "descricao": "Adjunto/DIII - Nível 4",
+                "descricao": "B/Adjunto - Nível 4",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -279,7 +279,7 @@
             },
             {
                 "id": 16,
-                "descricao": "Associado/DIV - Nível 1",
+                "descricao": "C/Associado - Nível 1",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -297,7 +297,7 @@
             },
             {
                 "id": 17,
-                "descricao": "Associado/DIV - Nível 2",
+                "descricao": "C/Associado - Nível 2",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -315,7 +315,7 @@
             },
             {
                 "id": 18,
-                "descricao": "Associado/DIV - Nível 3",
+                "descricao": "C/Associado - Nível 3",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
@@ -333,7 +333,7 @@
             },
             {
                 "id": 19,
-                "descricao": "Associado/DIV - Nível 4",
+                "descricao": "C/Associado - Nível 4",
                 "vencimentosBasicos": [
                     {
                         "idRegime": 1,
