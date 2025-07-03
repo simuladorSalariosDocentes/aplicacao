@@ -35,6 +35,7 @@ onMounted(() => {
         ir.idAnoBase          = hoje.getFullYear();
     }
 
+    atualizarVencimento();
 });
 
 function atualizarVencimento(event) {
@@ -50,13 +51,45 @@ function atualizarVencimento(event) {
 
     <div class="row g-3">
 
-        <!-- FCC -->
+        <!-- Ano Base -->
         <div class="col-9">
             <label for="selAnoBase" class="form-label">Ano Base</label>
             <select id="selAnoBase" class="form-select" v-model="previdencia.idAnoBase" @change="atualizarVencimento">
-                <option value="0">Em branco</option>
                 <option v-for="ano in dados.listaAnoBase" :value="ano.id">{{ ano.descricao }}</option>
             </select>
+        </div>
+
+        <!-- Regime Previdência -->
+        <div class="col-9">
+            <label for="selRegimePrev" class="form-label">Regime previdenciário</label>
+            <select id="selRegimePrev" class="form-select" v-model="previdencia.idRegime" @change="atualizarVencimento">
+                <option v-for="ano in dados.listaAnoBase" :value="ano.id">{{ ano.descricao }}</option>
+            </select>
+        </div>
+
+        <!-- Funpresp -->
+        <div class="col-12">
+            <!-- Funpresp -->
+            <div class="row">
+                <label for="selFunpresp" class="col-3 col-form-label">Funpresp</label>
+                <div class="col-7">
+                    <select id="selFunpresp" class="form-select" v-model="previdencia.idFunprespRegime" @change="atualizarVencimento">
+                        <option value="0">Não</option>
+                        <option v-for="ano in dados.listaAnoBase" :value="ano.id">{{ ano.descricao }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- FG Alíquota -->
+            <div class="row mt-2" v-if="previdencia.idFunprespRegime > 0">
+                <span class="col-1"></span>
+                <label for="selFunprespAliq" class="col-2 offset-1 col-form-label col-form-label-sm">Alíquota</label>
+                <div class="col-4">
+                    <select id="selFunprespAliq" class="form-select form-select-sm" v-model="previdencia.idFunprespAliquota" @change="atualizarVencimento">
+                        <option v-for="ano in dados.listaAnoBase" :value="ano.id">{{ ano.descricao }}</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
     </div>

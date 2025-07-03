@@ -34,7 +34,6 @@ function setGratificacoes(gratificacoes) {
 }
 
 function setPrevidenciaIR(previdencia, ir) {
-  console.log("passou");
   simulador.previdencia = previdencia;
   simulador.ir          = ir;
 

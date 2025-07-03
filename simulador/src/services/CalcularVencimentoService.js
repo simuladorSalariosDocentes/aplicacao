@@ -47,22 +47,26 @@ class CalcularVencimentoService {
             auxPreEscolar = calcularProventosService.calcularAuxilioPreEscolar(vencimento);
         }
 
-        if(vencimento.ir) {
-            ir = calcularDescontosService.calcularIR(vencimento);
-        }
-
-        
         if(percentualCD == dadosGratificacoesCDValoresService.PERCENTUAL_100) {
             //Quando a CD é 100%, não considera-se o vencimento do cargo
             //Após calcular os auxílios, deve-se zerar o vencimeno básico, pois será o valor da CD
             vencBasico = 0;
         }
 
+        //TODO - Calcular a previdência aqui
+
+
+        if(vencimento.ir) {
+            let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD; 
+            ir = calcularDescontosService.calcularIR(vencimento, valorBaseCalculoIR);
+        }
         
 
         proventos = vencBasico + retribTit + 
                     valeAlimen + saudeSup + auxTransp + auxPreEscolar +
                     gratificFCC + gratificFG + gratificCD;
+
+        descontos = ir;
 
         salarioLiquido = proventos - descontos;
         
@@ -78,7 +82,10 @@ class CalcularVencimentoService {
             auxPreEscolar: auxPreEscolar,
             gratificacaoFCC: gratificFCC,
             gratificacaoFG: gratificFG,
-            gratificacaoCD: gratificCD
+            gratificacaoCD: gratificCD,
+
+            descontos: descontos,
+            descontoIR: ir
         };        
     }
 

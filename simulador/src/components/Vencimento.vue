@@ -28,7 +28,10 @@ const valoresVencimento = reactive(
       auxPreEscolar: 0,
       gratificacaoFCC: 0,
       gratificacaoFG: 0,
-      gratificacaoCD: 0
+      gratificacaoCD: 0,
+
+      descontos: 0,
+      descontoIR: 0
 
 
     }
@@ -46,8 +49,6 @@ function calcularVencimento(vencimento) {
 defineExpose({
   calcularVencimento
 });
-
-
 
 </script>
 
@@ -124,6 +125,12 @@ defineExpose({
         <!-- Descontos -->
         <div class="col-12 fs-5">
           <span class="fw-bold">Descontos: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.descontos) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.descontoIR > 0">
+          <span class="fw-medium">Imposto de renda: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.descontoIR) }}</span>
         </div>
 
       </div>
