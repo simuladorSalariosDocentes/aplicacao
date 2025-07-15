@@ -5,12 +5,12 @@
             {
                 "idFaixa": 1,
                 "valorInicial": 0,
-                "valorFinal": 2259.19,
+                "valorFinal": 2428.80,
                 "aliquota": 0
             },
             {
                 "idFaixa": 2,
-                "valorInicial": 2259.20,
+                "valorInicial": 2428.81,
                 "valorFinal": 2826.65,
                 "aliquota": 7.5
             },

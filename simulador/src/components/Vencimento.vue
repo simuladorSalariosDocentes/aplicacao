@@ -31,9 +31,9 @@ const valoresVencimento = reactive(
       gratificacaoCD: 0,
 
       descontos: 0,
+      descontosPrevidencia: 0,
+      descontosFunpresp: 0,
       descontoIR: 0
-
-
     }
   }
 );
@@ -126,6 +126,16 @@ defineExpose({
         <div class="col-12 fs-5">
           <span class="fw-bold">Descontos: </span>
           <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.descontos) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.descontosPrevidencia > 0">
+          <span class="fw-medium">Previdência: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.descontosPrevidencia) }}</span>
+        </div>
+
+        <div class="col-12" v-if="valoresVencimento.valores.descontosFunpresp > 0">
+          <span class="fw-medium">Funpresp: </span>
+          <span>{{ formatarNumero.formatarReais(valoresVencimento.valores.descontosFunpresp) }}</span>
         </div>
 
         <div class="col-12" v-if="valoresVencimento.valores.descontoIR > 0">

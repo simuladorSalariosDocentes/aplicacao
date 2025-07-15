@@ -21,6 +21,8 @@ class CalcularVencimentoService {
         let percentualCD = 0;
         
         let descontos = 0;
+        let previdencia = 0;
+        let funpresp = 0;
         let ir = 0;          
 
         if(vencimento.gratificacoes) {
@@ -53,12 +55,18 @@ class CalcularVencimentoService {
             vencBasico = 0;
         }
 
-        //TODO - Calcular a previdência aqui
+        if(vencimento.previdencia) {
+            let valorBaseCalculoPrev = vencBasico + retribTit; 
+            previdencia = calcularDescontosService.calcularPrevidencia(vencimento.previdencia, valorBaseCalculoPrev);
+
+            funpresp = calcularDescontosService.calcularFunpresp(vencimento.previdencia, valorBaseCalculoPrev);
+        }
 
 
         if(vencimento.ir) {
-            let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD; 
-            ir = calcularDescontosService.calcularIR(vencimento, valorBaseCalculoIR);
+            let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD
+                                        - previdencia - funpresp; 
+            ir = calcularDescontosService.calcularIR(vencimento.ir, valorBaseCalculoIR);
         }
         
 
@@ -66,8 +74,8 @@ class CalcularVencimentoService {
                     valeAlimen + saudeSup + auxTransp + auxPreEscolar +
                     gratificFCC + gratificFG + gratificCD;
 
-        descontos = ir;
-
+        descontos = previdencia + funpresp + ir;
+        
         salarioLiquido = proventos - descontos;
         
         return {
@@ -85,6 +93,8 @@ class CalcularVencimentoService {
             gratificacaoCD: gratificCD,
 
             descontos: descontos,
+            descontosPrevidencia: previdencia,
+            descontosFunpresp: funpresp,
             descontoIR: ir
         };        
     }

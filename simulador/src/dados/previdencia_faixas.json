@@ -1,0 +1,55 @@
+[
+    {
+        "idAno": 2025,
+        "faixas": [
+            {
+                "idFaixa": 1,
+                "valorInicial": 0,
+                "valorFinal": 1518.00,
+                "aliquota": 7.5
+            },
+            {
+                "idFaixa": 2,
+                "valorInicial": 1518.01,
+                "valorFinal": 2793.88,
+                "aliquota": 9
+            },
+            {
+                "idFaixa": 3,
+                "valorInicial": 2793.89,
+                "valorFinal": 4190.83,
+                "aliquota": 12
+            },
+            {
+                "idFaixa": 4,
+                "valorInicial": 4190.84,
+                "valorFinal": 8157.41,
+                "aliquota": 14
+            },
+            {
+                "idFaixa": 5,
+                "valorInicial": 8157.42,
+                "valorFinal": 13969.49,
+                "aliquota": 14.5
+            },
+            {
+                "idFaixa": 6,
+                "valorInicial": 13969.50,
+                "valorFinal": 27938.95,
+                "aliquota": 16.5
+            },
+            {
+                "idFaixa": 7,
+                "valorInicial": 27938.96,
+                "valorFinal": 54480.97,
+                "aliquota": 19
+            },
+            {
+                "idFaixa": 8,
+                "valorInicial": 54480.98,
+                "valorFinal": 999999,
+                "aliquota": 22
+            }
+        ]
+    }
+]

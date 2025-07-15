@@ -33,11 +33,11 @@ onMounted(() => {
   <main class="container">
     <div class="row">
 
-      <div class="col-7">
+      <div class="col-lg-7 col-md-7 col-sm-12 mb-3">
         <Simulador @sumarizarSimulador="setVencimento" />
       </div>
 
-      <div class="col-5">
+      <div class="col-lg-5 col-md-5 col-sm-12">
         <Vencimento ref="compVencimento"  />
       </div>
 

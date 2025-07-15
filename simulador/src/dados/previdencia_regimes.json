@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "descricao": "Regime Próprio",
+        "sigla": "RPPS"
+    },
+    {
+        "id": 2,
+        "descricao": "Regime Complementar",
+        "sigla": "RPC"
+    }
+]
