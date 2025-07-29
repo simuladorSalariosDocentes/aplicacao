@@ -80,7 +80,7 @@ function atualizarVencimento(event) {
   <div class="row g-3">
 
     <!-- FCC -->
-    <div class="col-9">
+    <div class="col-lg-9 col-sm-12">
       <label for="selFCC" class="form-label">FCC</label>
       <select id="selFCC" class="form-select" v-model="gratificacoes.idFCC" @change="atualizarVencimento">
         <option value="0">Não</option>
@@ -94,8 +94,8 @@ function atualizarVencimento(event) {
     <div class="col-12">
       <!-- FG Versão -->
       <div class="row">
-        <label for="selFGVersao" class="col-1 col-form-label">FG</label>
-        <div class="col-7">
+        <label for="selFGVersao" class="col-sm-1 col-3 col-form-label">FG</label>
+        <div class="col-lg-7 col-9">
           <select id="selFGVersao" class="form-select" v-model="gratificacoes.fg.idFGVersao" @change="atualizarVencimento">
             <option value="0">Não</option>
             <option v-for="versao in dados.listaFGVersoes" :value="versao.id">{{ versao.descricao }}</option>
@@ -105,8 +105,8 @@ function atualizarVencimento(event) {
 
       <!-- FG Nível -->
       <div class="row mt-2" v-if="gratificacoes.fg.idFGVersao > 0">
-        <label for="selFGValor" class="col-2 offset-1 col-form-label col-form-label-sm">Nível</label>
-        <div class="col-5">
+        <label for="selFGValor" class="col-sm-2 col-3 offset-1 col-form-label col-form-label-sm">Nível</label>
+        <div class="col-lg-5 col-sm-7 col-8">
           <select id="selFGValor" class="form-select form-select-sm" v-model="gratificacoes.fg.idFGValor" @change="atualizarVencimento">
             <option v-for="nivel in dados.listaFGNiveis" :value="nivel.id">
               {{ nivel.descricao }}: {{ formatarNumero.formatarReais(nivel.valor) }}
@@ -120,8 +120,8 @@ function atualizarVencimento(event) {
     <div class="col-12">
       <!-- CD Versão -->
       <div class="row">
-        <label for="selCDVersao" class="col-1 col-form-label">CD</label>
-        <div class="col-7">
+        <label for="selCDVersao" class="col-sm-1 col-3 col-form-label">CD</label>
+        <div class="col-lg-7 col-9">
           <select id="selCDVersao" class="form-select" v-model="gratificacoes.cd.idCDVersao" @change="atualizarVencimento">
             <option value="0">Não</option>
             <option v-for="versao in dados.listaCDVersoes" :value="versao.id">{{ versao.descricao }}</option>
@@ -131,21 +131,25 @@ function atualizarVencimento(event) {
 
       <!-- CD Percentual -->
       <div class="row mt-2 gx-4" v-if="gratificacoes.cd.idCDVersao > 0">
-        <label class="col-2 offset-1 col-form-label col-form-label-sm">Percentual</label>
+        <label class="col-lg-2 col-sm-3 col-4 offset-1 col-form-label col-form-label-sm">Percentual</label>
         <div class="col-3">
           <div class="row row-cols-2">
             <div class="col">
               <input id="radCDRegime60" type="radio" v-model="gratificacoes.cd.percentual" 
                 :value="dadosGratificacoesCDValoresService.PERCENTUAL_60"
                 class="form-check-input me-2" @change="atualizarVencimento" />
-              <label for="radCDRegime60" class="form-check-label">{{ dadosGratificacoesCDValoresService.PERCENTUAL_60 }}%</label>
+              <label for="radCDRegime60" class="form-check-label" style="font-size: 0.8em;">
+                {{ dadosGratificacoesCDValoresService.PERCENTUAL_60 }}%
+              </label>
             </div>
 
             <div class="col">
               <input id="radCDRegime100" type="radio" v-model="gratificacoes.cd.percentual" 
                 :value="dadosGratificacoesCDValoresService.PERCENTUAL_100"
                 class="form-check-input me-2" @change="atualizarVencimento" />
-              <label for="radCDRegime100" class="form-check-label">{{ dadosGratificacoesCDValoresService.PERCENTUAL_100 }}%</label>
+              <label for="radCDRegime100" class="form-check-label" style="font-size: 0.8em;">
+                {{ dadosGratificacoesCDValoresService.PERCENTUAL_100 }}%
+              </label>
             </div>
           </div>
         </div>
@@ -153,8 +157,8 @@ function atualizarVencimento(event) {
 
       <!-- CD Nível -->
       <div class="row mt-2" v-if="gratificacoes.cd.idCDVersao > 0">
-        <label for="selCDValor" class="col-2 offset-1 col-form-label col-form-label-sm">Nível</label>
-        <div class="col-5">
+        <label for="selCDValor" class="col-sm-2 col-3 offset-1 col-form-label col-form-label-sm">Nível</label>
+        <div class="col-lg-5 col-sm-7 col-8">
           <select id="selCDValor" class="form-select form-select-sm" v-model="gratificacoes.cd.idCDValor" @change="atualizarVencimento">
             <option v-for="nivel in dados.listaCDNiveis" :value="nivel.id">
               {{ nivel.descricao }}: {{ formatarNumero.formatarReais(dadosGratificacoesCDValoresService.getValorComPercentual(nivel.valor, gratificacoes.cd.percentual)) }}

@@ -6,12 +6,12 @@ import { RouterLink, RouterView } from 'vue-router'
   <header class="container mt-1 mb-3">
     <nav class="navbar bg-success navColor" style="">
       <div class="container-fluid">
-        
+
         <a class="navbar-brand">
           <img src="/favicon.png" style="width: 50px;">
-          Simulador de salários docentes IFES
-        </a>
-        
+        </a>        
+        <span class="navbar-text" style="font-size: 1.4em;">Simulador de salários docentes IFES</span>
+
       </div>
     </nav>
   </header>

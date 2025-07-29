@@ -79,7 +79,7 @@ const isPrevidenciaRegimeRPC = computed(() => {
     <div class="row g-3">
 
         <!-- Ano Base -->
-        <div class="col-10">
+        <div class="col-lg-9 col-sm-12">
             <label for="selAnoBase" class="form-label">Ano Base</label>
             <select id="selAnoBase" class="form-select" v-model="previdencia.idAnoBase" @change="atualizarVencimento">
                 <option v-for="ano in dados.listaAnoBase" :value="ano.id">{{ ano.descricao }}</option>
@@ -87,7 +87,7 @@ const isPrevidenciaRegimeRPC = computed(() => {
         </div>
 
         <!-- Regime Previdência -->
-        <div class="col-10">
+        <div class="col-lg-9 col-sm-12">
             <label for="selRegimePrev" class="form-label">Regime previdenciário</label>
             <select id="selRegimePrev" class="form-select" v-model="previdencia.idRegime" @change="atualizarVencimento">
                 <option v-for="reg in dados.listaPrevidenciaRegimes" :value="reg.id">
@@ -100,8 +100,8 @@ const isPrevidenciaRegimeRPC = computed(() => {
         <div class="col-12">
             <!-- Funpresp -->
             <div class="row">
-                <label for="selFunpresp" class="col-2 col-form-label">Funpresp</label>
-                <div class="col-8">
+                <label for="selFunpresp" class="col-lg-2 col-md-3 col-4 col-form-label">Funpresp</label>
+                <div class="col-7">
                     <select id="selFunpresp" class="form-select" v-model="previdencia.funpresp" @change="atualizarVencimento">
                         <option :value="false">Não</option>
                         <option :value="true">Sim</option>
@@ -112,8 +112,8 @@ const isPrevidenciaRegimeRPC = computed(() => {
             <!-- Funpresp Alíquota -->
             <div class="row mt-2" v-if="previdencia.funpresp && isPrevidenciaRegimeRPC">
                 <span class="col-1"></span>
-                <label for="selFunprespAliq" class="col-3 offset-1 col-form-label col-form-label-sm">Alíquota</label>
-                <div class="col-4">
+                <label for="selFunprespAliq" class="col-sm-3 col-4 offset-1 col-form-label col-form-label-sm">Alíquota</label>
+                <div class="col-sm-4 col-5">
                     <select id="selFunprespAliq" class="form-select form-select-sm" v-model="previdencia.idFunprespAliquota" @change="atualizarVencimento">
                         <option v-for="aliq in dados.listaPrevidenciaFunprespAliquota" :value="aliq.id">
                             {{ aliq.descricao }}
@@ -125,8 +125,8 @@ const isPrevidenciaRegimeRPC = computed(() => {
              <!-- Funpresp Valor Extra -->
             <div class="row mt-2" v-if="previdencia.funpresp">
                 <span class="col-1"></span>
-                <label for="numFunpExtra" class="col-3 offset-1 col-form-label col-form-label-sm">Contribuição extra R$</label>
-                <div class="col-4">
+                <label for="numFunpExtra" class="col-sm-3 col-4 offset-1 col-form-label col-form-label-sm">Contribuição extra R$</label>
+                <div class="col-sm-4 col-5">
                     <input id="numFunpExtra" type="number" class="form-control form-control-sm" step="0.1" min="1"
                             v-model="previdencia.funprespValor" @change="atualizarVencimento">
                 </div>

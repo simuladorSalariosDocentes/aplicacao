@@ -65,7 +65,7 @@ function atualizarVencimento() {
   <div class="row g-3">
 
     <!-- Auxílio Alimentação -->
-    <div class="col-9">
+    <div class="col-lg-9 col-sm-12">
       <label for="selAuxAliment" class="form-label">Auxílio Alimentação</label>
       <select id="selAuxAliment" class="form-select" v-model="auxilios.idAuxAlimentacao" @change="atualizarVencimento">
         <option value="0">Não</option>
@@ -79,8 +79,8 @@ function atualizarVencimento() {
     <div class="col-12">
       <!-- Saude Sup. Versão -->
       <div class="row">
-        <label for="selSaudeSupVersao" class="col-3 col-form-label">Saúde Suplementar</label>
-        <div class="col-5">
+        <label for="selSaudeSupVersao" class="col-lg-3 col-md-5 col-sm-12 col-form-label">Saúde Suplementar</label>
+        <div class="col-lg-5 col-md-7 col-sm-12">
           <select id="selSaudeSupVersao" class="form-select" v-model="auxilios.saudeSup.idSaudeSupVersao" @change="atualizarVencimento">
             <option value="0">Não</option>
             <option v-for="versao in dados.saudeSuplementarVersoes" :value="versao.id">{{ versao.descricao }}</option>
@@ -105,25 +105,24 @@ function atualizarVencimento() {
       </div>
 
       <!-- Saude Sup. Dependentes -->
-      <div v-for="(dep, idx) in auxilios.saudeSup.dependentes" v-if="auxilios.saudeSup.idSaudeSupVersao > 0">
-        <div class="row mt-2">
-          <span class="col-1"></span>
-          <label :for="'selSaudeSupDep' + (idx+1)" class="col-3 col-form-label col-form-label-sm">Dependente {{ idx+1 }}</label>
-          <div class="col-4">
-            <select :id="'selSaudeSupDep' + (idx+1)" class="form-select form-select-sm" v-model="dep.idSaudeSup" @change="atualizarVencimento" >
-              <option value="0">Não</option>
-              <option v-for="faixa in dados.saudeSuplementarFaixas" :value="faixa.id">{{ faixa.descricao }}</option>
-            </select>
-          </div>
+      <div v-for="(dep, idx) in auxilios.saudeSup.dependentes" v-if="auxilios.saudeSup.idSaudeSupVersao > 0" class="row mt-2">
+        <span class="col-1"></span>
+        <label :for="'selSaudeSupDep' + (idx+1)" class="col-sm-3 col-5 col-form-label col-form-label-sm">Dependente {{ idx+1 }}</label>
+        <div class="col-sm-4 col-5">
+          <select :id="'selSaudeSupDep' + (idx+1)" class="form-select form-select-sm" v-model="dep.idSaudeSup" @change="atualizarVencimento" >
+            <option value="0">Não</option>
+            <option v-for="faixa in dados.saudeSuplementarFaixas" :value="faixa.id">{{ faixa.descricao }}</option>
+          </select>
         </div>
       </div>
+      
     </div>
 
     <!-- Auxílio Transporte -->
     <div class="col-12">
       <div class="row">
-        <label for="selAuxTrasnp" class="col-3 col-form-label">Auxílio Transporte</label>
-        <div class="col-5">
+        <label for="selAuxTrasnp" class="col-lg-3 col-md-5 col-sm-12 col-form-label">Auxílio Transporte</label>
+        <div class="col-lg-5 col-md-7 col-sm-12">
           <select id="selAuxTrasnp" class="form-select" v-model="auxilios.auxTranporte.ativo" @change="atualizarVencimento">
             <option :value="false">Não</option>
             <option :value="true">Sim</option>
@@ -133,8 +132,8 @@ function atualizarVencimento() {
 
       <div class="row mt-2" v-if="auxilios.auxTranporte.ativo">
         <span class="col-1"></span>
-        <label for="numGastoDiario" class="col-3 col-form-label col-form-label-sm">Gasto diário R$</label>
-        <div class="col-4">
+        <label for="numGastoDiario" class="col-sm-3 col-5 col-form-label col-form-label-sm">Gasto diário R$</label>
+        <div class="col-sm-4 col-5">
           <input id="numGastoDiario" type="number" class="form-control form-control-sm" step="0.2" min="1" max="99"
             v-model="auxilios.auxTranporte.gastoDiario" @change="atualizarVencimento">
         </div>
@@ -142,8 +141,8 @@ function atualizarVencimento() {
       
       <div class="row mt-2" v-if="auxilios.auxTranporte.ativo">
         <span class="col-1"></span>
-        <label for="numQtdDias" class="col-3 col-form-label col-form-label-sm">Dias trabalhados</label>
-        <div class="col-4">
+        <label for="numQtdDias" class="col-sm-3 col-5 col-form-label col-form-label-sm">Dias trabalhados</label>
+        <div class="col-sm-4 col-5">
           <input id="numQtdDias" type="number" class="form-control form-control-sm" min="1" max="22"
             v-model="auxilios.auxTranporte.diasTrabalhados" @change="atualizarVencimento">
         </div>
@@ -151,7 +150,7 @@ function atualizarVencimento() {
     </div>
 
     <!-- Auxílio Pré-escola -->
-    <div class="col-9">
+    <div class="col-lg-9 col-sm-12">
       <label for="selAuxPreEscola" class="form-label">Auxílio Pré-escolar</label>
       <select id="selAuxPreEscola" class="form-select" v-model="auxilios.idAuxPreEscolar" @change="atualizarVencimento">
         <option value="0">Não</option>
