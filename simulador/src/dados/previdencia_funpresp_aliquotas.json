@@ -1,8 +1,8 @@
 [
     {
-        "id": 1,
-        "descricao": "7,5%",
-        "aliquota": 7.5
+        "id": 3,
+        "descricao": "8,5%",
+        "aliquota": 8.5
     },
     {
         "id": 2,
@@ -10,8 +10,8 @@
         "aliquota": 8
     },
     {
-        "id": 3,
-        "descricao": "8,5%",
-        "aliquota": 8.5
+        "id": 1,
+        "descricao": "7,5%",
+        "aliquota": 7.5
     }
 ]

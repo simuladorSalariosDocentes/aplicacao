@@ -5,7 +5,7 @@
             {
                 "idFaixa": 1,
                 "valorInicial": 0,
-                "valorFinal": 1518.00,
+                "valorFinal": 1518,
                 "aliquota": 7.5
             },
             {
@@ -34,7 +34,7 @@
             },
             {
                 "idFaixa": 6,
-                "valorInicial": 13969.50,
+                "valorInicial": 13969.5,
                 "valorFinal": 27938.95,
                 "aliquota": 16.5
             },
