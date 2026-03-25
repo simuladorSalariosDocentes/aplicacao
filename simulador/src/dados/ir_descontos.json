@@ -1,0 +1,19 @@
+[
+    {
+        "idAno": 2026,
+        "descontos": [
+            {
+                "idDesconto": 1,
+                "valorSalarioContemplado": 5000,
+                "valorMaximoDesconto": 312.89,
+                "multiplicadorRendaDesconto": 0
+            },
+            {
+                "idDesconto": 2,
+                "valorSalarioContemplado": 7350,
+                "valorMaximoDesconto": 978.62,
+                "multiplicadorRendaDesconto": 0.133145
+            }
+        ]
+    }
+]

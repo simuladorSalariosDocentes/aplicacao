@@ -46,8 +46,27 @@ onMounted(() => {
 
 function gerenciarSelecaoVersao() {
   dados.classes = dadosClassesService.carregarDados(carreira.idVersao);
-  if(dados.classes)
-    carreira.idClasse = dados.classes[0].id;
+  if(dados.classes) {
+    
+    //Tratamento para manter a classe seleciona ao trocar a versão
+    let classeSelecionada = dadosClassesService.carregarRegistro(carreira.idClasse);
+    
+    let idClasseSelecionada = 0;
+    
+    if(classeSelecionada) {
+      dados.classes.forEach(c => {
+        if(c.descricao == classeSelecionada.descricao) {
+          idClasseSelecionada = c.id;
+          return;
+        }
+      }); 
+    }
+
+    if(idClasseSelecionada > 0)
+      carreira.idClasse = idClasseSelecionada;
+    else
+      carreira.idClasse = dados.classes[0].id; //Caso não existe classe selecionada, utiliza a primeira do array
+  }
 }
 
 function atualizarVencimento(event) {

@@ -13,6 +13,7 @@ const emit = defineEmits(['calcularPrevidenciaIR']);
 const previdencia = reactive({
     idAnoBase: 0,
     idRegime: 0,
+    parcelaRemun: false,
     funpresp: false,
     idFunprespAliquota: 0,
     funprespValor: 0
@@ -96,6 +97,15 @@ const isPrevidenciaRegimeRPC = computed(() => {
             </select>
         </div>
 
+        <!-- Parcela Remuneratória -->
+        <div class="col-lg-9 col-sm-12">
+            <label for="selParecelaRemum" class="form-label">Incluir parecelas remuneratórias</label>
+            <select id="selParecelaRemum" class="form-select" v-model="previdencia.parcelaRemun" @change="atualizarVencimento">
+                <option :value="false">Não</option>
+                <option :value="true">Sim</option>
+            </select>
+        </div>
+
         <!-- Funpresp -->
         <div class="col-12">
             <!-- Funpresp -->
@@ -122,7 +132,7 @@ const isPrevidenciaRegimeRPC = computed(() => {
                 </div>
             </div>
 
-             <!-- Funpresp Valor Extra -->
+            <!-- Funpresp Valor Extra -->
             <div class="row mt-2" v-if="previdencia.funpresp">
                 <span class="col-1"></span>
                 <label for="numFunpExtra" class="col-sm-3 col-4 offset-1 col-form-label col-form-label-sm">Contribuição extra R$</label>
@@ -131,6 +141,7 @@ const isPrevidenciaRegimeRPC = computed(() => {
                             v-model="previdencia.funprespValor" @change="atualizarVencimento">
                 </div>
             </div>
+
         </div>
 
     </div>

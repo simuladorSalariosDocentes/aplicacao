@@ -33,5 +33,40 @@
                 "aliquota": 27.5
             }
         ]
+    },
+    {
+        "idAno": 2026,
+        "faixas": [
+            {
+                "idFaixa": 6,
+                "valorInicial": 0,
+                "valorFinal": 2428.8,
+                "aliquota": 0
+            },
+            {
+                "idFaixa": 7,
+                "valorInicial": 2428.81,
+                "valorFinal": 2826.65,
+                "aliquota": 7.5
+            },
+            {
+                "idFaixa": 8,
+                "valorInicial": 2826.66,
+                "valorFinal": 3751.05,
+                "aliquota": 15
+            },
+            {
+                "idFaixa": 9,
+                "valorInicial": 3751.06,
+                "valorFinal": 4664.68,
+                "aliquota": 22.5
+            },
+            {
+                "idFaixa": 10,
+                "valorInicial": 4664.69,
+                "valorFinal": 999999,
+                "aliquota": 27.5
+            }
+        ]
     }
 ]

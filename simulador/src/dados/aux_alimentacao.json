@@ -1,5 +1,10 @@
 [
     {
+        "id": 2,
+        "descricao": "A partir de Dez/2025",
+        "valor": 1175
+    },
+    {
         "id": 1,
         "descricao": "A partir de Mai/2024",
         "valor": 1000

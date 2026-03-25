@@ -57,6 +57,15 @@ class CalcularVencimentoService {
 
         if(vencimento.previdencia) {
             let valorBaseCalculoPrev = vencBasico + retribTit; 
+            
+            //Caso o CD for 100%, inclui o CD na base de cálculo da previdência
+            if(percentualCD == dadosGratificacoesCDValoresService.PERCENTUAL_100)
+                valorBaseCalculoPrev += gratificCD;
+
+            //Caso as parcelas remuneratórias estejam incluída, adicona-se seus valores na base de cálculo
+            else if(vencimento.previdencia.parcelaRemun)
+                valorBaseCalculoPrev += gratificFCC + gratificCD + gratificFG;
+
             previdencia = calcularDescontosService.calcularPrevidencia(vencimento.previdencia, valorBaseCalculoPrev);
 
             funpresp = calcularDescontosService.calcularFunpresp(vencimento.previdencia, valorBaseCalculoPrev);
@@ -64,8 +73,9 @@ class CalcularVencimentoService {
 
 
         if(vencimento.ir) {
-            let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD
-                                        - previdencia - funpresp; 
+            let valorBaseCalculoIR = 5909.42;
+            //let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD
+            //                            - previdencia - funpresp; 
             ir = calcularDescontosService.calcularIR(vencimento.ir, valorBaseCalculoIR);
         }
         

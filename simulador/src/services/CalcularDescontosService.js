@@ -56,7 +56,7 @@ class CalcularDescontosService {
             //Se o regime for RPC, calcula o valor da funpresp de acordo com a Alíquota
             if(previdencia.idAnoBase > 0 && previdencia.idRegime > 0 && previdencia.idFunprespAliquota > 0) {
                 let valorBaseFunpresp = 0;
-                
+
                 if(this.#isRegimePrevidenciaRPC(previdencia.idRegime)) {
                     const valorTeto = this.#getValorTetoPrevidencia(previdencia.idAnoBase);
                     
