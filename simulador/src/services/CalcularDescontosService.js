@@ -3,6 +3,7 @@ import { dadosPrevidenciaFaixasService } from "./dados/DadosPrevidenciaFaixasSer
 import { dadosPrevidenciaRegimesService } from "./dados/DadosPrevidenciaRegimesService";
 import { dadosAnosBaseService } from "./dados/DadosAnosBaseService";
 import { dadosPrevidenciaFunprespAliquotasService } from "./dados/DadosPrevidenciaFunprespAliquotasService";
+import { dadosIrDescontosService } from "./dados/DadosIrDescontosService";
 
 class CalcularDescontosService {
 
@@ -80,10 +81,11 @@ class CalcularDescontosService {
         return totalFunpresp;
     }
     
-    calcularIR(ir, valorBaseCalculo) {
+    calcularIR(ir, valorBaseCalculo, valorRenda) {
         let totalIR = 0;
         
         if(ir.idAnoBase > 0) {
+            //Cálculo dos IR de acordo com as faixas
             const faixasIR = 
                 dadosIrFaixasService.carregarRegistro(ir.idAnoBase);
 
@@ -105,10 +107,33 @@ class CalcularDescontosService {
                         totalIR += (valorFaixa * faixa.aliquota) / 100;
                     }
                 });
+            }
 
+            //Aplica os descontos do IR de acordo com a renda e valor do imposto
+            const descontosIR = 
+                dadosIrDescontosService.carregarRegistro(ir.idAnoBase);
+            
+            if(descontosIR) { 
+                
+                descontosIR.forEach(descIR => {
+                    
+                    //Aplica o desconto
+                    if(valorRenda <= descIR.valorSalarioContemplado) {
+                        let valorDesconto = 
+                            descIR.valorMaximoDesconto - (descIR.multiplicadorRendaDesconto * valorRenda);
+
+                        if(valorDesconto > totalIR)
+                            totalIR = 0;
+                        else
+                            totalIR = totalIR - valorDesconto;
+
+                        return; //Aplica apenas uma faixa de desconto
+                    }
+                });
             }
         }
 
+        ///
         return totalIR;
     }
 

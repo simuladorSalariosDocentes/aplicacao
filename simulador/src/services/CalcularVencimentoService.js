@@ -73,10 +73,12 @@ class CalcularVencimentoService {
 
 
         if(vencimento.ir) {
-            let valorBaseCalculoIR = 5909.42;
-            //let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD
-            //                            - previdencia - funpresp; 
-            ir = calcularDescontosService.calcularIR(vencimento.ir, valorBaseCalculoIR);
+            let valorBaseCalculoIR = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD
+                                        - previdencia - funpresp; 
+            
+            let valorRenda = vencBasico + retribTit + gratificFCC + gratificFG + gratificCD;
+            
+            ir = calcularDescontosService.calcularIR(vencimento.ir, valorBaseCalculoIR, valorRenda);
         }
         
 
